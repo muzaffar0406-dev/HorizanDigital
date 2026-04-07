@@ -117,7 +117,7 @@ This project is licensed under the MIT License.
 
 For inquiries or collaboration:
 
-* GitHub: [https://github.com/your-username](https://github.com/muzaffar0406-dev)
+* GitHub: [https://github.com/muzaffar0406-dev](https://github.com/muzaffar0406-dev)
 
 
 ---
