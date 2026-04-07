@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Horizon Digital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+       </style>
+    <link rel="stylesheet" href="comman.css">
+</head>
+<body class="bg-white text-slate-800">
+          <!-- Navigation -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-4">
+          <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-primary flex items-center">
+              <span class="gradient-text">Horizon</span>
+              <span class="text-slate-800">Digital</span>
+            </a>
+      
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex flex-1 justify-center">
+              <div class="flex items-center space-x-10">
+      
+                <a href="index.html" class="font-medium hover:text-primary transition">Home</a>
+                <a href="about.html" class="font-medium hover:text-primary transition">About</a>
+      
+                <!-- ▼ Services Dropdown Start -->
+                <div class="relative group inline-block">
+    <button
+        class="font-medium hover:text-primary transition flex items-center gap-1 focus:outline-none"
+        tabindex="-1"
+        aria-haspopup="true"
+        aria-expanded="false"
+    >
+        Services
+        <svg class="w-4 h-4 transform transition group-hover:rotate-180" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div
+        class="absolute left-0 top-full mt-3 w-60 bg-white shadow-lg rounded-md border 
+        opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+        translate-y-2 group-hover:translate-y-0 
+        transition-all duration-200 z-50"
+    >
+        <a href="seo.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">SEO Services</a>
+        <a href="webservices.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">Web Development</a>
+        <a href="smm.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">Social Media Marketing</a>
+        <a href="app.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">App Development</a>
+    </div>
+</div>
+
+
+                <!-- ▲ Services Dropdown End -->
+      
+                <a href="contact.html" class="font-medium hover:text-primary transition">Contact</a>
+                <a href="faq.html" class="font-medium hover:text-primary transition">FAQ</a>
+              </div>
+            </nav>
+      
+            <!-- Mobile menu button at right -->
+            <div class="md:hidden">
+              <button id="menu-btn" class="block relative h-6 w-6 focus:outline-none">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+              </button>
+            </div>
+          </div>
+      
+          <!-- Mobile Navigation -->
+          <div class="md:hidden">
+            <div id="mobile-menu" class="hidden flex-col mt-4 space-y-2">
+      
+              <a href="index.html" class="block px-4 py-2 hover:bg-slate-100 rounded">Home</a>
+              <a href="about.html" class="block px-4 py-2 hover:bg-slate-100 rounded">About</a>
+      
+              <!-- Mobile dropdown-style for Services -->
+              <details class="block px-4 py-2 hover:bg-slate-100 rounded">
+                <summary class="cursor-pointer font-medium">Services</summary>
+                <ul class="ml-4 mt-2 space-y-1 text-sm">
+                  <li><a href="seo.html" class="block hover:text-blue-600">SEO Services</a></li>
+                  <li><a href="webservices.html" class="block hover:text-blue-600">Web Development</a></li>
+                  <li><a href="smm.html" class="block hover:text-blue-600">Social Media</a></li>
+                  <li><a href="app.html" class="block hover:text-blue-600">App Development</a></li>
+                </ul>
+              </details>
+
+              <a href="contact.html" class="block px-4 py-2 hover:bg-slate-100 rounded">Contact</a>
+              <a href="faq.html" class="block px-4 py-2 hover:bg-slate-100 rounded">FAQ</a>
+            </div>
+          </div>
+        </div>
+      </header>
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 text-white pt-24">
+        <div class="container mx-auto px-6 py-24 flex flex-col items-center justify-center text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">About Horizon Digital</h1>
+            <p class="text-xl opacity-90 max-w-2xl">Bridging creativity with data-driven marketing to grow your business</p>
+        </div>
+    </header>
+
+    <!-- Who We Are -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Who We Are</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    At <span class="font-semibold text-blue-600">Horizon Digital</span>, we're a passionate team of digital marketers, designers, and strategists dedicated to helping businesses grow in the online world. Founded with the vision of bridging the gap between creativity and data-driven marketing, we've been delivering impactful digital solutions since day one.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">What We Do</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    We specialize in creating tailored strategies for each brand — whether it's enhancing your social media presence, optimizing your website for search engines, running high-converting ad campaigns, or building a strong brand identity. Our goal is simple: <span class="font-semibold text-blue-600">To help your business thrive online.</span>
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="service-icon rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">SEO & SEM</h3>
+                    <p class="text-gray-600">Boost your visibility in search results and drive targeted traffic</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="service-icon rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Social Media Marketing</h3>
+                    <p class="text-gray-600">Engage your audience and build brand loyalty</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="service-icon rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">PPC Campaigns</h3>
+                    <p class="text-gray-600">Get immediate results with targeted advertising</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                    <div class="service-icon rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Web Design</h3>
+                    <p class="text-gray-600">Beautiful, functional websites that convert visitors</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <!-- Mission Card -->
+                <div class="mission-card p-8 relative">
+                    <div class="flex items-start mb-6">
+                        <div class="feature-icon bg-blue-100 text-blue-600 mr-4">
+                            <i class="fas fa-bullseye text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Our Mission</h3>
+                            <div class="absolute bottom-0 right-0 opacity-10">
+                                <i class="fas fa-bullseye fa-5x text-blue-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg">
+                        To empower businesses of all sizes by crafting powerful digital experiences that generate real, measurable results. We combine creativity with analytics to deliver strategies that drive growth and success.
+                    </p>
+                </div>
+                
+                <!-- Vision Card -->
+                <div class="mission-card p-8 relative">
+                    <div class="flex items-start mb-6">
+                        <div class="feature-icon bg-indigo-100 text-indigo-600 mr-4">
+                            <i class="fas fa-binoculars text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">Our Vision</h3>
+                            <div class="absolute bottom-0 right-0 opacity-10">
+                                <i class="fas fa-binoculars fa-5x text-indigo-500"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-lg">
+                        To become a trusted digital partner for brands worldwide, known for innovation, integrity, and results. We envision a future where businesses of all sizes can thrive in the digital landscape.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Why Choose Us?</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Discover what makes our digital marketing services stand out</p>
+            </div>
+            
+            <div class="max-w-5xl mx-auto">
+                <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-start mb-4">
+                            <div class="feature-icon bg-green-100 text-green-600 mr-4">
+                                <i class="fas fa-user-tie text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Experienced Professionals</h3>
+                                <p class="text-gray-600">Our team combines years of industry experience with cutting-edge expertise in digital marketing strategies.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-start mb-4">
+                            <div class="feature-icon bg-blue-100 text-blue-600 mr-4">
+                                <i class="fas fa-comments text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Transparent Communication</h3>
+                                <p class="text-gray-600">We provide clear, regular updates and real-time reporting on all campaigns with no hidden surprises.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-start mb-4">
+                            <div class="feature-icon bg-purple-100 text-purple-600 mr-4">
+                                <i class="fas fa-shapes text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Custom Strategies</h3>
+                                <p class="text-gray-600">No cookie-cutter solutions — we tailor our approach for each client's unique needs and business objectives.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
+                        <div class="flex items-start mb-4">
+                            <div class="feature-icon bg-orange-100 text-orange-600 mr-4">
+                                <i class="fas fa-chart-line text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-2">Data-Driven Approach</h3>
+                                <p class="text-gray-600">We let the numbers guide our decisions using advanced analytics for maximum impact and ROI.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Meet Our Team</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-4">Our success comes from the incredible talent and dedication of our team members</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fc1732f8-92b2-49f6-bc5b-6cb42bb87430.png" alt="Professional headshot of Mohd Yusuf, a male digital marketing expert with glasses and business casual attire" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-1">Mohd Yusuf</h3>
+                    <p class="text-blue-600 font-medium text-center mb-4">Digital Marketing Expert</p>
+                    <p class="text-gray-600 text-center">
+                        With a sharp eye for marketing trends and analytics, Yusuf leads our digital marketing strategies with precision and performance-driven focus. He ensures every campaign delivers maximum ROI.
+                    </p>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d27f8286-d4ef-4951-b0b3-ae5a6c85aa3b.png" alt="Professional headshot of Muzaffar Husain, a male web developer with stubble and a focused expression" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-1">Muzaffar Husain</h3>
+                    <p class="text-blue-600 font-medium text-center mb-4">Web Design & Development Specialist</p>
+                    <p class="text-gray-600 text-center">
+                        A creative mind with technical expertise, Muzaffar crafts responsive, user-friendly websites that not only look great but also perform flawlessly across all devices.
+                    </p>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dc24ff7a-896f-4662-a031-0e3fa299b516.png" alt="Professional headshot of Mohd Ali, a male SMM specialist smiling confidently" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-1">Sayed Raquib</h3>
+                    <p class="text-blue-600 font-medium text-center mb-4">SMM & SEO Strategist</p>
+                    <p class="text-gray-600 text-center">
+                        Ali is the powerhouse behind our social media and SEO success. From growing audiences to ranking high on Google, he turns digital visibility into business impact.
+                    </p>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="team-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bd57385f-1909-4f0a-96e3-c3423de63360.png" alt="Professional headshot of Aquib, a young male Android developer with a friendly smile" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-xl font-bold text-center mb-1">Mohd Aquib</h3>
+                    <p class="text-blue-600 font-medium text-center mb-4">Android App Developer</p>
+                    <p class="text-gray-600 text-center">
+                        Aquib brings mobile ideas to life. He develops intuitive and powerful Android applications tailored to your brand, ensuring a seamless user experience and cutting-edge functionality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="gradient-bg py-16 text-black-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Grow Your Business Online?</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Let's discuss how Horizon Digital can help you achieve your digital marketing goals.</p>
+            <button class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300 shadow-lg">
+                Contact Us Today
+            </button>
+        </div>
+    </section>
+<hr class="my-8">
+
+
+     <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <a href="#" class="text-2xl font-bold flex items-center">
+                        <span class="gradient-text">Horizon</span>
+                        <span>Digital</span>
+                    </a>
+                    <p class="mt-4 text-slate-400">
+                        Helping businesses grow through strategic digital marketing solutions.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="seo.html" class="text-slate-400 hover:text-white transition">SEO Optimization</a></li>
+                        <li><a href="ppc.html" class="text-slate-400 hover:text-white transition">PPC Advertising</a></li>
+                        <li><a href="smm.html" class="text-slate-400 hover:text-white transition">Social Media</a></li>
+                        <li><a href="content.html" class="text-slate-400 hover:text-white transition">Content Marketing</a></li>
+                        <li><a href="email.html" class="text-slate-400 hover:text-white transition">Email Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-slate-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="casestudies.html" class="text-slate-400 hover:text-white transition">Case Studies</a></li>
+                        <li><a href="careers.html" class="text-slate-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="text-slate-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="contact.html" class="text-slate-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>
+                            <i class="fas fa-phone-alt mr-2 text-primary"></i>
+                            <a href="tel:+918787278927" class="hover:text-white transition">+91 87872 78927</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2 text-primary"></i>
+                            <a href="mailto:info@horizondigital.com" class="hover:text-white transition">info@horizondigital.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                            Chamanganj, Kanpur, Uttar Pradesh, India
+                        </li>
+                    </ul>
+                </div>
+            
+        </div>
+        <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col justify-center items-center text-center">
+            <p class="text-slate-500 text-sm mb-4 md:mb-0">
+                © 2025 Horizon Digital. All rights reserved.
+            </p>
+        </div>
+</footer>
+</body>
+<script src="mobileview.js"></script>
+</html>

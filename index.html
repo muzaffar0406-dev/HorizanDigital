@@ -1,0 +1,788 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon Digital | Modern Marketing Solutions</title>
+    <script src="https://cdn.tailwindcss.com">
+    
+    // FAQ Accordion
+        document.querySelectorAll('#faq button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                button.classList.toggle('active');
+                content.classList.toggle('hidden');
+                
+                if (button.classList.contains('active')) {
+                    icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+                } else {
+                    icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+                }
+            });
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="comman.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');</style>
+    <style>
+    
+        /* Counter Animation */
+        @keyframes countUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .counter {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #4f46e5, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+        .counter-animate {
+            animation: countUp 1s ease-out forwards;
+        }
+
+        /* marquee styles */
+         @keyframes client-marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-client-marquee {
+            animation: client-marquee 25s linear infinite;
+        }
+
+        /*css for whatsapp*/
+   .whatsapp-float {
+  position: fixed;
+  bottom: 20px; /* increased from 20px */
+  right: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+</style>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+<body class="bg-white text-slate-800">
+         <!-- Navigation -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-4">
+          <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#index.html" class="text-2xl font-bold text-primary flex items-center">
+              <span class="gradient-text">Horizon</span>
+              <span class="text-slate-800">Digital</span>
+            </a>
+      
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex flex-1 justify-center">
+              <div class="flex items-center space-x-10">
+      
+                <a href="index.html" class="font-medium hover:text-primary transition">Home</a>
+                <a href="about.html" class="font-medium hover:text-primary transition">About</a>
+      
+                <!-- ▼ Services Dropdown Start -->
+                <div class="relative group inline-block">
+    <button
+        class="font-medium hover:text-primary transition flex items-center gap-1 focus:outline-none"
+        tabindex="-1"
+        aria-haspopup="true"
+        aria-expanded="false"
+    >
+        Services
+        <svg class="w-4 h-4 transform transition group-hover:rotate-180" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div
+        class="absolute left-0 top-full mt-3 w-60 bg-white shadow-lg rounded-md border 
+        opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+        translate-y-2 group-hover:translate-y-0 
+        transition-all duration-200 z-50"
+    >
+        <a href="seo.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">SEO Services</a>
+        <a href="webservices.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">Web Development</a>
+        <a href="smm.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">Social Media Marketing</a>
+        <a href="app.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">App Development</a>
+    </div>
+</div>
+
+
+                <!-- ▲ Services Dropdown End -->
+      
+                <a href="contact.html" class="font-medium hover:text-primary transition">Contact</a>
+                <a href="faq.html" class="font-medium hover:text-primary transition">FAQ</a>
+              </div>
+            </nav>
+      
+            <!-- Mobile menu button at right -->
+            <div class="md:hidden">
+              <button id="menu-btn" class="block relative h-6 w-6 focus:outline-none">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+              </button>
+            </div>
+          </div>
+      
+          <!-- Mobile Navigation -->
+          <div class="md:hidden">
+            <div id="mobile-menu" class="hidden flex-col mt-4 space-y-2">
+      
+              <a href="index.html" class="block px-4 py-2 hover:bg-slate-100 rounded">Home</a>
+              <a href="about.html" class="block px-4 py-2 hover:bg-slate-100 rounded">About</a>
+      
+              <!-- Mobile dropdown-style for Services -->
+              <details class="block px-4 py-2 hover:bg-slate-100 rounded">
+                <summary class="cursor-pointer font-medium">Services</summary>
+                <ul class="ml-4 mt-2 space-y-1 text-sm">
+                  <li><a href="seo.html" class="block hover:text-blue-600">SEO Services</a></li>
+                  <li><a href="webservices.html" class="block hover:text-blue-600">Web Development</a></li>
+                  <li><a href="smm.html" class="block hover:text-blue-600">Social Media</a></li>
+                  <li><a href="app.html" class="block hover:text-blue-600">App Development</a></li>
+                </ul>
+              </details>
+
+              <a href="contact.html" class="block px-4 py-2 hover:bg-slate-100 rounded">Contact</a>
+              <a href="faq.html" class="block px-4 py-2 hover:bg-slate-100 rounded">FAQ</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 md:pt-40 md:pb-28 max-w-7xl mx-auto px-6 md:px-8">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                    <span class="gradient-text">Digital Growth</span> <br>
+                    For Modern Businesses
+                </h1>
+                <p class="text-lg text-slate-600 mb-8">
+                    We help brands thrive in the digital landscape with data-driven strategies and cutting-edge marketing solutions.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://wa.me/918787278927?text=Hi%20I%20want%20to%20know%20more%20about%20your%20services" target="_blank" rel="noopener" class="bg-white text-primary px-8 py-3 rounded-md hover:bg-slate-200 transition font-medium shadow flex items-center justify-center gap-2">
+                        <i class="fas fa-phone-alt"></i> Get Free Consultation
+                    </a>
+                     <a href="about.html" class="bg-primary text-black-50 px-8 py-3 rounded-md hover:bg-primary-light transition font-medium shadow flex items-center justify-center gap-2">
+                        <i class="fas fa-info-circle"></i> Know More
+                    </a>
+                </div>
+             
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1e9f0ae8-5f75-45cf-bc40-2c9017ebc235.png" alt="Digital marketing team collaborating around a laptop with analytics dashboard visible" class="rounded-xl shadow-xl w-full">
+            </div>
+        </div>
+    </section>
+
+<!-- description Section -->
+    <section 
+    class="relative py-20 px-6 md:px-10 bg-cover bg-center bg-no-repeat dark:bg-slate-900 transition-all duration-700"
+    style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80');"
+>
+    <!-- Overlay for better readability -->
+    <div class="absolute inset-0 bg-white/90 dark:bg-slate-900/80 backdrop-blur-sm"></div>
+
+    <!-- Content Container -->
+    <div class="relative max-w-5xl mx-auto text-center animate-fade-in">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+            Empowering Kanpur Businesses Through Smart Digital Marketing
+        </h2>
+        <p class="text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
+            At <span class="font-semibold text-primary">Horizon Digital</span>, we help small and medium-sized businesses in Kanpur grow their online presence. From local SEO and Google ads to social media management and websites — we deliver results that matter.
+        </p>
+        <p class="mt-4 text-base text-slate-600 dark:text-slate-400">
+            We combine proven digital strategies with in-depth knowledge of the Kanpur market to drive traffic, leads, and conversions for your business.
+        </p>
+
+        <!-- CTA Button -->
+        <div class="mt-8">
+            <a href="#services" class="bg-white text-primary px-8 py-3 rounded-md hover:bg-slate-200 transition font-medium shadow">
+                Learn More
+            </a>
+            
+        </div>
+    </div>
+</section>
+
+
+    
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 max-w-7xl mx-auto px-6 md:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-primary font-medium">OUR SERVICES</span>
+            <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Complete Digital Marketing Solutions</h2>
+            <p class="text-slate-600">
+                We offer end-to-end digital marketing services to help your business grow and succeed in today's competitive online landscape.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div class="service-card bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:border-primary/10 transition-all duration-300">
+                <div class="w-14 h-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6">
+                    <i class="fas fa-bullseye text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">PPC Advertising</h3>
+                <p class="text-slate-600 mb-4">
+                    Strategic paid campaigns on Google, Facebook, and LinkedIn to drive targeted traffic and high-quality leads.
+                </p>
+                <a href="#" class="text-primary font-medium inline-flex items-center group">
+                    Learn more
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+            
+            <!-- Service 2 -->
+            <div class="service-card bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:border-primary/10 transition-all duration-300">
+                <div class="w-14 h-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6">
+                    <i class="fas fa-search text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">SEO Optimization</h3>
+                <p class="text-slate-600 mb-4">
+                    Improve your search visibility and organic traffic with our comprehensive technical and content SEO strategies.
+                </p>
+                <a href="#" class="text-primary font-medium inline-flex items-center group">
+                    Learn more
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+            
+            <!-- Service 3 -->
+            <div class="service-card bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:border-primary/10 transition-all duration-300">
+                <div class="w-14 h-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6">
+                    <i class="fas fa-envelope-open-text text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Email Marketing</h3>
+                <p class="text-slate-600 mb-4">
+                    Automated email sequences that nurture leads and turn subscribers into loyal customers.
+                </p>
+                <a href="#" class="text-primary font-medium inline-flex items-center group">
+                    Learn more
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+            
+            <!-- Service 4 -->
+            <div class="service-card bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:border-primary/10 transition-all duration-300">
+                <div class="w-14 h-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6">
+                    <i class="fas fa-paint-brush text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Content Creation</h3>
+                <p class="text-slate-600 mb-4">
+                    High-quality blog posts, videos, and graphics that engage your audience and establish authority.
+                </p>
+                <a href="#" class="text-primary font-medium inline-flex items-center group">
+                    Learn more
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+            
+            <!-- Service 5 -->
+            <div class="service-card bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:border-primary/10 transition-all duration-300">
+                <div class="w-14 h-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6">
+                    <i class="fas fa-chart-line text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Analytics & Reporting</h3>
+                <p class="text-slate-600 mb-4">
+                    Data-driven insights and performance tracking to optimize your marketing ROI.
+                </p>
+                <a href="#" class="text-primary font-medium inline-flex items-center group">
+                    Learn more
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+            
+            <!-- Service 6 -->
+            <div class="service-card bg-white p-8 rounded-xl shadow-md border border-slate-100 hover:border-primary/10 transition-all duration-300">
+                <div class="w-14 h-14 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-6">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Social Media Management</h3>
+                <p class="text-slate-600 mb-4">
+                    Strategic social media campaigns that build brand awareness and foster engagement.
+                </p>
+                <a href="#" class="text-primary font-medium inline-flex items-center group">
+                    Learn more
+                    <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+
+       <!-- How We Do It Section -->
+    <section class="py-20 bg-white flex items-center justify-center"></section>
+        <div class="max-w-7xl mx-auto px-6 md:px-8 flex flex-col lg:flex-row items-center gap-16">
+            <!-- Left: Process Steps -->
+            <div class="w-full lg:w-1/2">
+                <div class="mb-10 lg:mb-16 text-center">
+                    <span class="text-primary font-medium">OUR PROCESS</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">How We Do It</h2>
+                    <p class="text-slate-600 max-w-2xl">
+                        A proven 4-step process to transform your digital presence and grow your business.
+                    </p>
+                </div>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span class="text-primary text-xl font-bold">1</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-1">Discovery & Strategy</h3>
+                            <p class="text-slate-600">
+                                We analyze your business, competitors and target audience to create a custom roadmap for success.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span class="text-primary text-xl font-bold">2</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-1">Implementation</h3>
+                            <p class="text-slate-600">
+                                Our experts execute the strategy with proven marketing tactics tailored to your business goals.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span class="text-primary text-xl font-bold">3</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-1">Optimization</h3>
+                            <p class="text-slate-600">
+                                Continuous testing and refinement to maximize performance and ROI for your campaigns.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-5">
+                        <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                            <span class="text-primary text-xl font-bold">4</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold mb-1">Results & Scaling</h3>
+                            <p class="text-slate-600">
+                                We track KPIs and scale successful strategies to accelerate your business growth.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right: Image -->
+            <div class="w-full lg:w-1/2 flex justify-center">
+                <img src="https://www.maidenstride.com/kanpur/img/home/best-digital-marketing-agency-in-kanpur.webp" alt="Process illustration" class="rounded-xl shadow-xl w-full max-w-md">
+            </div>
+        </div>
+    </section>
+    <!-- Centered Heading Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Horizon Digital?</h2>
+            <p class="text-slate-600">
+                We blend local expertise with global digital marketing trends to deliver measurable results for Kanpur businesses. Partner with us for transparent communication, creative solutions, and a relentless focus on your growth.
+            </p>
+        </div>
+        </div>
+        
+         <!-- Stats Counter Section -->
+    <section class="py-20 bg-gradient-to-r from-primary/5 to-primary/10">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="counter" id="projects-counter">0</div>
+                    <p class="text-lg text-slate-600 mt-4">Projects Completed</p>
+                </div>
+                <div class="p-6">
+                    <div class="counter" id="clients-counter">0</div>
+                    <p class="text-lg text-slate-600 mt-4">Happy Clients</p>
+                </div>
+                <div class="p-6">
+                    <div class="counter" id="revenue-counter">0</div>
+                    <p class="text-lg text-slate-600 mt-4">Revenue Generated</p>
+                </div>
+                <div class="p-6">
+                    <div class="counter" id="growth-counter">0%</div>
+                    <p class="text-lg text-slate-600 mt-4">Average Growth</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- Work/Portfolio Section -->
+    <section id="work" class="bg-slate-50 py-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-primary font-medium">OUR WORK</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Success Stories</h2>
+                <p class="text-slate-600">
+                    Discover how we've helped businesses achieve remarkable results through strategic digital marketing.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Case Study 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f47cd161-266e-4cca-b807-66d2419ec95f.png" alt="E-commerce dashboard showing sales growth after marketing campaign implementation" class="w-full h-64 object-cover group-hover:scale 105 transition-transform">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="text-sm text-white/80">E-Commerce</span>
+                                <h3 class="text-xl font-bold text-white">Online Retail Growth</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-sm text-slate-600">Results:</span>
+                                <ul class="list-disc list-inside text-sm text-slate-600">
+                                    <li>320% Increase in Revenue</li>
+                                    <li>1500+ New Customers</li>
+                                </ul>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-md text-sm hover:bg-primary-light transition">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case Study 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden group">
+                    <div class="relative overflow-hidden">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/31d554fa-89de-4e87-9ebd-a11d2289ac25.png" alt="Mobile app analytics showing increased user engagement metrics" class="w-full h-64 object-cover group-hover:scale-105 transition-transform">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+                            <div>
+                                <span class="text-sm text-white/80">Mobile App</span>
+                                <h3 class="text-xl font-bold text-white">User Acquisition Campaign</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-sm text-slate-600">Results:</span>
+                                <ul class="list-disc list-inside text-sm text-slate-600">
+                                    <li>80% Lower CAC</li>
+                                    <li>25k+ App Downloads</li>
+                                </ul>
+                            </div>
+                            <button class="bg-primary text-white px-4 py-2 rounded-md text-sm hover:bg-primary-light transition">
+                                View Case Study
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border border-primary text-primary px-6 py-3 rounded-md hover:bg-primary/5 transition font-medium">
+                    View All Case Studies
+                </button>
+            </div>
+        </div>
+    </section>
+
+<!-- Clients Section -->
+<section class="bg-slate-100 py-12 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-center text-3xl font-bold text-slate-800 mb-8">Our Valuable Clients</h2>
+        <div class="relative w-full overflow-hidden">
+            <div class="flex gap-8 animate-client-marquee whitespace-nowrap">
+                <img src="https://www.svgrepo.com/show/303601/troy-lee-designs-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303563/cartier-2-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303518/fitbit-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303340/woocommerce-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303519/hoonigan-logo-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303515/fast-company-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303427/the-walking-dead-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303584/hermes-1-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303518/fitbit-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303436/dunlop-tires-logo.svg" class="h-12 inline-block" />
+                <!-- Duplicate for seamless loop -->
+                <img src="https://www.svgrepo.com/show/303601/troy-lee-designs-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303563/cartier-2-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303518/fitbit-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303519/hoonigan-logo-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303515/fast-company-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303585/michelin-6-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303584/hermes-1-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303518/fitbit-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303572/wifi-2-logo.svg" class="h-12 inline-block" />
+                <img src="https://www.svgrepo.com/show/303416/tripadvisor-logo.svg" class="h-12 inline-block" />
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+<!-- FAQ Section -->
+<section id="faq" class="py-20 max-w-7xl mx-auto px-6 md:px-8 bg-slate-50">
+    <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-primary font-medium">FAQS</span>
+        <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">Frequently Asked Questions</h2>
+        <p class="text-slate-600">
+            Get answers to common questions about our Kanpur-based digital marketing services.
+        </p>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-4" x-data="{ selected: null }">
+        <!-- Single Accordion Item -->
+        <div class="bg-white p-6 rounded-lg shadow-md" @click="selected !== 1 ? selected = 1 : selected = null">
+            <button class="flex items-center justify-between w-full text-left font-medium text-primary">
+                <span>Where is your agency located in Kanpur?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300" :class="{ 'rotate-180': selected === 1 }"></i>
+            </button>
+            <div x-show="selected === 1" x-transition class="mt-2 text-slate-600">
+                <p>We are located in Chamanganj, Kanpur—close to many coaching institutes and small businesses. You can also reach us online, and we offer virtual meetings for your convenience.</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md" @click="selected !== 2 ? selected = 2 : selected = null">
+            <button class="flex items-center justify-between w-full text-left font-medium text-primary">
+                <span>What makes your Kanpur agency different?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300" :class="{ 'rotate-180': selected === 2 }"></i>
+            </button>
+            <div x-show="selected === 2" x-transition class="mt-2 text-slate-600">
+                <p>Unlike generic agencies, we specialize in helping small and local Kanpur businesses grow online using budget-friendly, targeted strategies. We combine global marketing trends with local audience behavior to deliver results that matter.</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md" @click="selected !== 3 ? selected = 3 : selected = null">
+            <button class="flex items-center justify-between w-full text-left font-medium text-primary">
+                <span>Do you serve clients outside Kanpur?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300" :class="{ 'rotate-180': selected === 3 }"></i>
+            </button>
+            <div x-show="selected === 3" x-transition class="mt-2 text-slate-600">
+                <p>Yes, absolutely! While Kanpur is our home base, we also work with clients in Lucknow, Delhi, Mumbai, and even overseas. Our remote communication system allows us to stay connected and deliver quality services wherever you're located.</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md" @click="selected !== 4 ? selected = 4 : selected = null">
+            <button class="flex items-center justify-between w-full text-left font-medium text-primary">
+                <span>What services do you offer specifically for local businesses?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300" :class="{ 'rotate-180': selected === 4 }"></i>
+            </button>
+            <div x-show="selected === 4" x-transition class="mt-2 text-slate-600">
+                <p>We offer services like Google My Business optimization, hyperlocal SEO, WhatsApp marketing, Instagram/Facebook ad campaigns, and website development—all tailored for shops, institutes, and local brands in Kanpur.</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md" @click="selected !== 5 ? selected = 5 : selected = null">
+            <button class="flex items-center justify-between w-full text-left font-medium text-primary">
+                <span>How long does it take to see results?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300" :class="{ 'rotate-180': selected === 5 }"></i>
+            </button>
+            <div x-show="selected === 5" x-transition class="mt-2 text-slate-600">
+                <p>It depends on your service package. Paid ad campaigns (like Facebook/Google Ads) can show results within 7–14 days. For SEO and content marketing, it usually takes 1–3 months to see significant growth in traffic and leads.</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md" @click="selected !== 6 ? selected = 6 : selected = null">
+            <button class="flex items-center justify-between w-full text-left font-medium text-primary">
+                <span>Is there any support after the project is completed?</span>
+                <i class="fas fa-chevron-down transition-transform duration-300" :class="{ 'rotate-180': selected === 6 }"></i>
+            </button>
+            <div x-show="selected === 6" x-transition class="mt-2 text-slate-600">
+                <p>Yes! We provide post-project support for up to 30 days depending on your package. We also offer monthly maintenance and marketing plans for continuous growth and assistance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+    <section class="bg-primary text-black-50 py-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-6">Ready to Grow Your Business?</h2>
+                <p class="text-primary-200 mb-8">
+                    Schedule a free consultation with our team and discover how we can help you achieve your digital marketing goals.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                     <a href="#services" class="bg-white text-primary px-8 py-3 rounded-md hover:bg-slate-200 transition font-medium shadow">
+                        Get Started
+                    </a>
+                    <a href="tel:+918787278927" class="bg-white text-primary px-8 py-3 rounded-md hover:bg-slate-200 transition font-medium shadow">
+                        Call Us Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--whatsapp icon-->
+    <a href="https://wa.me/918787278927" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+</a>
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <a href="#" class="text-2xl font-bold flex items-center">
+                        <span class="gradient-text">Horizon</span>
+                        <span>Digital</span>
+                    </a>
+                    <p class="mt-4 text-slate-400">
+                        Helping businesses grow through strategic digital marketing solutions.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="seo.html" class="text-slate-400 hover:text-white transition">SEO Optimization</a></li>
+                        <li><a href="ppc.html" class="text-slate-400 hover:text-white transition">PPC Advertising</a></li>
+                        <li><a href="smm.html" class="text-slate-400 hover:text-white transition">Social Media</a></li>
+                        <li><a href="content.html" class="text-slate-400 hover:text-white transition">Content Marketing</a></li>
+                        <li><a href="email.html" class="text-slate-400 hover:text-white transition">Email Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-slate-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="casestudies.html" class="text-slate-400 hover:text-white transition">Case Studies</a></li>
+                        <li><a href="careers.html" class="text-slate-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="text-slate-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="contact.html" class="text-slate-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>
+                            <i class="fas fa-phone-alt mr-2 text-primary"></i>
+                            <a href="tel:+918787278927" class="hover:text-white transition">+91 87872 78927</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2 text-primary"></i>
+                            <a href="mailto:info@horizondigital.com" class="hover:text-white transition">info@horizondigital.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                            Chamanganj, Kanpur, Uttar Pradesh, India
+                        </li>
+                    </ul>
+                </div>
+            
+        </div>
+        <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col justify-center items-center text-center">
+            <p class="text-slate-500 text-sm mb-4 md:mb-0">
+                © 2025 Horizon Digital. All rights reserved.
+            </p>
+        </div>
+        </footer>
+
+    
+    <script src="mobileview.js"></script>
+
+<script>
+
+// Counter Animation
+        const counters = [
+            { id: 'projects-counter', target: 250, suffix: '+' },
+            { id: 'clients-counter', target: 120, suffix: '+' },
+            { id: 'revenue-counter', target: 3.5, suffix: 'M' },
+            { id: 'growth-counter', target: 200, suffix: '%' }
+        ];
+
+        function animateCounters() {
+            counters.forEach(counter => {
+                const element = document.getElementById(counter.id);
+                const target = counter.target;
+                const suffix = counter.suffix || '';
+                let count = 0;
+                const increment = target / 50;
+                
+                const updateCount = () => {
+                    count += increment;
+                    if (count < target) {
+                        if (counter.id === 'revenue-counter') {
+                            element.textContent = count.toFixed(1) + suffix;
+                        } else {
+                            element.textContent = Math.floor(count) + suffix;
+                        }
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        if (counter.id === 'revenue-counter') {
+                            element.textContent = target.toFixed(1) + suffix;
+                        } else {
+                            element.textContent = target + suffix;
+                        }
+                        element.classList.add('counter-animate');
+                    }
+                };
+                
+                updateCount();
+            });
+        }
+
+        // Initialize counters when section is in view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const counterSection = document.querySelector('.bg-gradient-to-r');
+        if (counterSection) {
+            observer.observe(counterSection);
+        }
+           
+    </script>
+</body>
+</html>
+
+

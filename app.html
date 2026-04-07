@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horaizon Digital - Android App Development Services in Kanpur</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="comman.css">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');</style>
+</head>
+<body class="bg-white text-slate-800">
+        <!-- Navigation -->
+    <header class="fixed w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 md:px-8 py-4">
+          <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-primary flex items-center">
+              <span class="gradient-text">Horizon</span>
+              <span class="text-slate-800">Digital</span>
+            </a>
+      
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex flex-1 justify-center">
+              <div class="flex items-center space-x-10">
+      
+                <a href="index.html" class="font-medium hover:text-primary transition">Home</a>
+                <a href="about.html" class="font-medium hover:text-primary transition">About</a>
+      
+                <!-- ▼ Services Dropdown Start -->
+                <div class="relative group inline-block">
+    <button
+        class="font-medium hover:text-primary transition flex items-center gap-1 focus:outline-none"
+        tabindex="-1"
+        aria-haspopup="true"
+        aria-expanded="false"
+    >
+        Services
+        <svg class="w-4 h-4 transform transition group-hover:rotate-180" fill="none"
+            stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+
+    <!-- Dropdown Menu -->
+    <div
+        class="absolute left-0 top-full mt-3 w-60 bg-white shadow-lg rounded-md border 
+        opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+        translate-y-2 group-hover:translate-y-0 
+        transition-all duration-200 z-50"
+    >
+        <a href="seo.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">SEO Services</a>
+        <a href="webservices.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">Web Development</a>
+        <a href="smm.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">Social Media Marketing</a>
+        <a href="app.html" class="block px-4 py-2 text-sm hover:bg-blue-50 transition">App Development</a>
+    </div>
+</div>
+
+
+                <!-- ▲ Services Dropdown End -->
+      
+                <a href="contact.html" class="font-medium hover:text-primary transition">Contact</a>
+                <a href="faq.html" class="font-medium hover:text-primary transition">FAQ</a>
+              </div>
+            </nav>
+      
+            <!-- Mobile menu button at right -->
+            <div class="md:hidden">
+              <button id="menu-btn" class="block relative h-6 w-6 focus:outline-none">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+              </button>
+            </div>
+          </div>
+      
+          <!-- Mobile Navigation -->
+          <div class="md:hidden">
+            <div id="mobile-menu" class="hidden flex-col mt-4 space-y-2">
+      
+              <a href="index.html" class="block px-4 py-2 hover:bg-slate-100 rounded">Home</a>
+              <a href="about.html" class="block px-4 py-2 hover:bg-slate-100 rounded">About</a>
+      
+              <!-- Mobile dropdown-style for Services -->
+              <details class="block px-4 py-2 hover:bg-slate-100 rounded">
+                <summary class="cursor-pointer font-medium">Services</summary>
+                <ul class="ml-4 mt-2 space-y-1 text-sm">
+                  <li><a href="seo.html" class="block hover:text-blue-600">SEO Services</a></li>
+                  <li><a href="webservices.html" class="block hover:text-blue-600">Web Development</a></li>
+                  <li><a href="smm.html" class="block hover:text-blue-600">Social Media</a></li>
+                  <li><a href="app.html" class="block hover:text-blue-600">App Development</a></li>
+                </ul>
+              </details>
+
+              <a href="contact.html" class="block px-4 py-2 hover:bg-slate-100 rounded">Contact</a>
+              <a href="faq.html" class="block px-4 py-2 hover:bg-slate-100 rounded">FAQ</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Build Your <span>Android App</span> with Us</h1>
+                    <p>Expert Android app development services tailored for businesses in Kanpur. We create user-friendly, high-performance apps that engage your audience and drive growth.</p>
+                    <a href="#services" class="cta-button">Explore Our Services</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://www.maidenstride.com/kanpur/img/app-dev/Mobile-app-development-715x715.webp" alt="Android app development illustration" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Android App Development Services</h2>
+                <p>Comprehensive solutions to elevate your mobile presence in Kanpur's competitive market</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://www.maidenstride.com/kanpur/img/app-dev/nevigate.webp" alt="Custom App Development icon" />
+                    </div>
+                    <h3>Custom App Development</h3>
+                    <p>Tailored Android applications that meet your specific business needs and user expectations.</p>
+                    <a href="#contact" class="service-link">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://www.maidenstride.com/kanpur/img/app-dev/Engaging-app.webp" alt="E-commerce App Development icon" />
+                    </div>
+                    <h3>E-Commerce App Solutions</h3>
+                    <p>Complete e-commerce app development with secure payment gateways and user-friendly interfaces.</p>
+                    <a href="#contact" class="service-link">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://www.maidenstride.com/kanpur/img/app-dev/simple.webp" alt="App Maintenance icon" />
+                    </div>
+                    <h3>App Maintenance & Support</h3>
+                    <p>Ongoing support and updates to ensure your app runs smoothly and stays relevant.</p>
+                    <a href="#contact" class="service-link">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <img src="https://e7.pngegg.com/pngimages/544/253/png-clipart-user-interface-design-icon-design-graphic-design-design-web-design-user-interface-design-thumbnail.png" alt="UI/UX Design icon" />
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creating intuitive and engaging user interfaces that enhance user experience.</p>
+                    <a href="#contact" class="service-link">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="https://www.maidenstride.com/kanpur/img/app-dev/app-developer.webp" alt="Team of app developers collaborating" />
+                </div>
+                <div class="about-text">
+                    <h2>Why Choose Horaizon Digital for Android App Development?</h2>
+                    <p>We are a local Kanpur team with a passion for technology and innovation. Our expertise in Android app development ensures that your app stands out in the crowded marketplace.</p>
+                    <div class="features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h3>Experienced Developers</h3>
+                                <p>Our team consists of skilled developers with years of experience in Android app development.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h3>Agile Methodology</h3>
+                                <p>We follow agile practices to ensure timely delivery and flexibility in development.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h3>Client-Centric Approach</h3>
+                                <p>Your satisfaction is our priority; we work closely with you throughout the development process.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from businesses we've helped transform with our Android app development services</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"The team at Horaizon Digital developed our app seamlessly. Their expertise in Android development is unmatched!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/68dbd2eb-1804-4048-b9f6-21c2612d6732.png" alt="Client 1" />
+                        </div>
+                        <div class="author-info">
+                            <h4>Ravi Kumar</h4>
+                            <p>Owner, Kanpur Tech Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>"Our app has received great feedback from users. Thanks to Horaizon Digital for their excellent service!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aa684f5d-57ea-4a00-aeea-758761535010.png" alt="Client 2" />
+                        </div>
+                        <div class="author-info">
+                            <h4>Neha Singh</h4>
+                            <p>Founder, Kanpur Fashion Hub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Develop Your Android App?</h2>
+            <p>Partner with Kanpur's leading app development team to create an app that engages your users.</p>
+            <a href="#contact" class="cta-button-white">Get Your Free Consultation</a>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Let's discuss how we can help your Kanpur business succeed with a mobile app</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <div class="contact-method">
+                        <div class="contact-icon">✉</div>
+                        <div>
+                            <p>Email us at</p>
+                            <p>info@horaizondigital.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <p>Call us at</p>
+                            <p>+91 87872 878927</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <p>Visit us at</p>
+                            <p>Chamanganj, Kanpur, Uttar Pradesh 208001</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">How Can We Help?</label>
+                            <textarea id="message" placeholder="Tell us about your project"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button-white">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <a href="#" class="text-2xl font-bold flex items-center">
+                        <span class="gradient-text">Horizon</span>
+                        <span>Digital</span>
+                    </a>
+                    <p class="mt-4 text-slate-400">
+                        Helping businesses grow through strategic digital marketing solutions.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-slate-400 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="seo.html" class="text-slate-400 hover:text-white transition">SEO Optimization</a></li>
+                        <li><a href="ppc.html" class="text-slate-400 hover:text-white transition">PPC Advertising</a></li>
+                        <li><a href="smm.html" class="text-slate-400 hover:text-white transition">Social Media</a></li>
+                        <li><a href="content.html" class="text-slate-400 hover:text-white transition">Content Marketing</a></li>
+                        <li><a href="email.html" class="text-slate-400 hover:text-white transition">Email Marketing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-slate-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="casestudies.html" class="text-slate-400 hover:text-white transition">Case Studies</a></li>
+                        <li><a href="careers.html" class="text-slate-400 hover:text-white transition">Careers</a></li>
+                        <li><a href="blog.html" class="text-slate-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="contact.html" class="text-slate-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4">Contact Us</h4>
+                    <ul class="space-y-2 text-slate-400">
+                        <li>
+                            <i class="fas fa-phone-alt mr-2 text-primary"></i>
+                            <a href="tel:+918787278927" class="hover:text-white transition">+91 87872 78927</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope mr-2 text-primary"></i>
+                            <a href="mailto:info@horizondigital.com" class="hover:text-white transition">info@horizondigital.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt mr-2 text-primary"></i>
+                            Chamanganj, Kanpur, Uttar Pradesh, India
+                        </li>
+                    </ul>
+                </div>
+            
+        </div>
+        <div class="border-t border-slate-800 mt-12 pt-8 flex flex-col justify-center items-center text-center">
+            <p class="text-slate-500 text-sm mb-4 md:mb-0">
+                © 2025 Horizon Digital. All rights reserved.
+            </p>
+        </div>
+</footer>
+</body>
+  <script src="mobileview.js"></script>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Best SEO Company in India | Horaizan Digital</title>
+  <style>
+    :root {
+      --primary: #1d4ed8;
+      --accent: #2563eb;
+      --bg-light: #f9fafb;
+      --bg-dark: #f3f4f6;
+      --text-main: #1f2937;
+      --heading: #111827;
+      --muted: #6b7280;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+      color: var(--text-main);
+      background-color: var(--bg-light);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    header {
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      color: white;
+      padding: 4rem 1rem 3rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.7rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+    }
+
+    .btn-primary {
+      margin-top: 1.5rem;
+      background-color: white;
+      color: var(--primary);
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #e0e7ff;
+    }
+
+    .section {
+      padding: 4rem 1rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .section.alt {
+      background-color: var(--bg-dark);
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      color: var(--heading);
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
+    .card-grid {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(29, 78, 216, 0.1);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(29, 78, 216, 0.15);
+      border-color: rgba(29, 78, 216, 0.3);
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover .card-image {
+      transform: scale(1.03);
+    }
+
+    .card-content {
+      padding: 0 0.5rem;
+    }
+
+    .card-content p {
+      margin-bottom: 1rem;
+      color: var(--muted);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .card ul {
+      padding-left: 1.2rem;
+      color: #374151;
+    }
+
+    .card ul li {
+      margin-bottom: 0.5rem;
+      list-style-type: disc;
+    }
+
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .step {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .step:hover {
+    transform: translateY(-5px);
+  }
+
+  .step-img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    
+  }
+
+  .step-icon {
+    background: #1d4ed8;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+  }
+
+  .step-content h3 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .step-content p {
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+
+
+    .faq {
+      margin-top: 2rem;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: var(--bg-dark);
+      color: var(--muted);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>India's Trusted SEO Company</h1>
+    <p>We help brands dominate search results, generate qualified traffic, and grow their business sustainably.</p>
+    <a href="#contact" class="btn-primary">Get Free SEO Consultation</a>
+  </header>
+
+  <section class="section">
+    <h2>Why Choose Horaizan Digital?</h2>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2197f340-7b4c-495c-8ddb-ae6ccf4a5b10.png" alt="ROI-Driven Strategy" class="card-image">
+        <h3>ROI-Driven Strategy</h3>
+        <div class="card-content">
+          <p>We create customized SEO plans focused on delivering measurable returns through:</p>
+          <ul>
+            <li>Customized SEO plans</li>
+            <li>Lead & sales focused approach</li>
+            <li>Conversion rate optimization</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Experienced+SEO+Experts" alt="Experienced SEO Experts">
+        <h3>🧠 Experienced SEO Experts</h3>
+        <ul>
+          <li>10+ years in SEO</li>
+          <li>Certified professionals</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Transparent+Reporting" alt="Transparent Reporting">
+        <h3>📊 Transparent Reporting</h3>
+        <ul>
+          <li>Monthly performance reports</li>
+          <li>Real-time dashboards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <h2>Our SEO Services</h2>
+    <div class="card-grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=SEO+Audit" alt="SEO Audit">
+        <h3>🕵️ SEO Audit</h3>
+        <ul>
+          <li>Technical and On-page SEO check</li>
+          <li>Competitor gap analysis</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Keyword+Research" alt="Keyword Research">
+        <h3>🔑 Keyword Research</h3>
+        <ul>
+          <li>High-volume, low-difficulty targeting</li>
+          <li>Buyer intent keywords</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Technical+SEO" alt="Technical SEO">
+        <h3>🛠️ Technical SEO</h3>
+        <ul>
+          <li>Speed & Core Web Vitals</li>
+          <li>Mobile & crawl optimization</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Local+SEO" alt="Local SEO">
+        <h3>📍 Local SEO</h3>
+        <ul>
+          <li>Google Business Profile optimization</li>
+          <li>NAP, citations & local rankings</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=Link+Building" alt="Link Building">
+        <h3>🔗 Link Building</h3>
+        <ul>
+          <li>High-quality backlinks</li>
+          <li>Guest posting & outreach</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300x200?text=SEO+Content" alt="SEO Content">
+        <h3>📃 SEO Content</h3>
+        <ul>
+          <li>Blogs & landing pages</li>
+          <li>Topic clusters & content maps</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Our SEO Process</h2>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-icon">1</div>
+        <div class="step-content">
+          <h3 style="margin: 0; font-size: 1rem;">Site & Competitor Audit</h3>
+          <p style="margin: 0.25rem 0 0; font-size: 0.9rem; color: var(--muted);">Comprehensive analysis of your website and competitors</p>
+        </div>
+      </div>
+      <div class="step">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/25ebcb4c-b617-42af-9942-bce9a849391f.png" alt="Keyword Research Process" class="step-img">
+        <div class="step-icon">2</div>
+        <div class="step-content">
+          <h3>Keyword Research & Planning</h3>
+          <p>Identifying high-value keywords for your business</p>
+        </div>
+      </div>
+      <div class="step">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/eab70b9c-819d-4dad-a73a-8b267959d317.png" alt="Technical SEO Process" class="step-img">
+        <div class="step-icon">3</div>
+        <div class="step-content">
+          <h3>Technical & On-page Fixes</h3>
+          <p>Optimizing website structure and content</p>
+        </div>
+      </div>
+      <div class="step">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5185c29e-7b54-46ef-ba4a-8770c12b3791.png" alt="Content Development Process" class="step-img">
+        <div class="step-icon">4</div>
+        <div class="step-content">
+          <h3>Content Development</h3>
+          <p>Creating SEO-optimized content strategy</p>
+        </div>
+      </div>
+      <div class="step">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/b521d536-09fe-4d3c-a593-0febdd0d4d2b.png" alt="Link Building Process" class="step-img">
+        <div class="step-icon">5</div>
+        <div class="step-content">
+          <h3>Link Building</h3>
+          <p>Acquiring high-quality backlinks</p>
+        </div>
+      </div>
+      <div class="step">
+        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aac879ab-0756-4764-b7ba-d7f3e29096c6.png" alt="SEO Reporting Process" class="step-img">
+        <div class="step-icon">6</div>
+        <div class="step-content">
+          <h3>Monthly Reporting & Tweaks</h3>
+          <p>Continuous optimization based on data</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <strong>How long does it take to see results?</strong>
+      <p>Generally 3–6 months depending on your niche and competition.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Is SEO a one-time process?</strong>
+      <p>No, it's an ongoing effort to maintain and grow rankings.</p>
+    </div>
+    <div class="faq-item">
+      <strong>Do you offer local and national SEO?</strong>
+      <p>Yes, we handle both local SEO (Google Maps) and broader campaigns.</p>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Get in Touch With Us</h2>
+    <p style="text-align:center;">Start growing your business with SEO today. Contact us for a free consultation:</p>
+    <p style="text-align:center; margin-top:1rem;">
+      📞 <a href="tel:+918787278927">+91 87872 78927</a><br>
+      ✉️ <a href="mailto:info@horizondigital.com">info@horizondigital.com</a>
+    </p>
+    <p style="text-align:center;">
+      <a href="mailto:info@horizondigital.com" class="btn-primary">Request Free Audit</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Horaizan Digital. All Rights Reserved.
+  </footer>
+</body>
+</html>
