@@ -117,8 +117,8 @@ This project is licensed under the MIT License.
 
 For inquiries or collaboration:
 
-* GitHub: [https://github.com/your-username](https://github.com/your-username)
-* Email: [your-email@example.com](mailto:your-email@example.com)
+* GitHub: [https://github.com/your-username](https://github.com/muzaffar0406-dev)
+
 
 ---
 
